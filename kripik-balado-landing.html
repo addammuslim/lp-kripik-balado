@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kripik Balado Lumer Viral | Alamama Cassava</title>
+  <meta name="description" content="Kripik Balado Lumer Terenak & Terlezat. Berdiri sejak 1999. 10.000+ pelanggan puas. COD tersedia!">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #E8192C;
+      --red-dark: #B5001D;
+      --red-glow: rgba(232,25,44,0.25);
+      --orange: #FF6B2B;
+      --gold: #FFB800;
+      --cream: #FFF8F0;
+      --brown: #3D1A00;
+      --white: #FFFFFF;
+      --text: #1A0A00;
+      --text-muted: #7A4A2A;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Sora', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(160deg, #1A0A00 0%, #3D1A00 40%, #7A1A00 100%);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px 80px;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, #1A0A00 0%, #3d0000 40%, #8d0000 100%);
+
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,184,0,0.15);
+      border: 1px solid rgba(255,184,0,0.4);
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(40px, 9vw, 88px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 8px;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--red);
+      display: block;
+    }
+    .hero-sub {
+      font-size: clamp(14px, 2.5vw, 18px);
+      color: rgba(255,255,255,0.7);
+      margin-top: 16px;
+      margin-bottom: 36px;
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+    .hero-img-wrap {
+      width: min(380px, 88vw);
+      margin: 0 auto 40px;
+      position: relative;
+      animation: fadeUp 0.8s 0.3s ease both;
+    }
+    .hero-img-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+      height: 40px;
+      background: radial-gradient(ellipse, rgba(232,25,44,0.5) 0%, transparent 70%);
+    }
+    .hero-img-wrap img {
+      width: 100%;
+      border-radius: 24px;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 3px rgba(232,25,44,0.4);
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: clamp(16px, 4vw, 48px);
+      flex-wrap: wrap;
+      margin-bottom: 44px;
+      animation: fadeUp 0.7s 0.4s ease both;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-num {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 800;
+      color: var(--gold);
+      display: block;
+    }
+    .stat-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.55);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--red), var(--red-dark));
+      color: white;
+      font-size: 17px;
+      font-weight: 800;
+      text-decoration: none;
+      padding: 20px 44px;
+      border-radius: 100px;
+      box-shadow: 0 8px 40px rgba(232,25,44,0.5), inset 0 1px 0 rgba(255,255,255,0.15);
+      transition: transform 0.2s, box-shadow 0.2s;
+      animation: fadeUp 0.7s 0.5s ease both;
+      letter-spacing: 0.5px;
+    }
+    .hero-cta:hover { transform: translateY(-3px); box-shadow: 0 16px 60px rgba(232,25,44,0.6); }
+    .hero-cta .arrow { font-size: 22px; }
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+      animation: fadeUp 0.7s 0.6s ease both;
+    }
+    .trust-badge {
+      color: rgba(255,255,255,0.5);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .trust-badge span { font-size: 14px; }
+
+    /* ── URGENCY BAR ── */
+    .urgency-bar {
+      background: var(--red);
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    #timer-display {
+      background: rgba(0,0,0,0.25);
+      padding: 4px 14px;
+      border-radius: 100px;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      min-width: 80px;
+      display: inline-block;
+    }
+
+    /* ── SECTION COMMONS ── */
+    section { padding: 80px 20px; }
+    .container { max-width: 720px; margin: 0 auto; }
+    .section-label {
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      font-size: clamp(28px, 5vw, 44px);
+      color: var(--brown);
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+    .section-desc {
+      text-align: center;
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 560px;
+      margin: 0 auto 48px;
+    }
+
+    /* ── ABOUT ── */
+    .about { background: white; }
+    .about-card {
+      background: linear-gradient(135deg, #FFF8F0, #FFEDE0);
+      border-radius: 24px;
+      padding: 40px 36px;
+      border: 1.5px solid rgba(232,25,44,0.12);
+      text-align: center;
+    }
+    .about-card .big-num {
+      font-size: 64px;
+      font-weight: 800;
+      color: var(--red);
+      line-height: 1;
+    }
+    .about-card .big-label { font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+    .about-card p { font-size: 15px; line-height: 1.8; color: var(--text); }
+
+    /* ── INGREDIENTS ── */
+    .ingredients { background: var(--cream); }
+    .ingredients-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .ingredient-card {
+      background: white;
+      border-radius: 20px;
+      padding: 28px 20px;
+      text-align: center;
+      border: 1.5px solid rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .ingredient-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+    .ing-icon { font-size: 40px; margin-bottom: 12px; }
+    .ing-title { font-size: 13px; font-weight: 700; color: var(--brown); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .ing-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    /* ── SOCIAL PROOF ── */
+    .social-proof { background: white; }
+    .review-list { display: flex; flex-direction: column; gap: 20px; }
+    .review-card {
+      background: var(--cream);
+      border-radius: 20px;
+      padding: 24px 28px;
+      border-left: 4px solid var(--red);
+      position: relative;
+    }
+    .review-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .review-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--red), var(--orange));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      font-weight: 800; color: white;
+      flex-shrink: 0;
+    }
+    .review-name { font-size: 14px; font-weight: 700; color: var(--brown); }
+    .review-loc { font-size: 11px; color: var(--text-muted); }
+    .review-stars { color: var(--gold); font-size: 14px; letter-spacing: 1px; }
+    .review-text { font-size: 14px; line-height: 1.7; color: var(--text); }
+    .reorder-badge {
+      display: inline-block;
+      background: rgba(232,25,44,0.1);
+      color: var(--red);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 100px;
+      margin-top: 10px;
+      letter-spacing: 1px;
+    }
+
+    /* ── COUNTER ── */
+    .counter-strip {
+      background: linear-gradient(135deg, var(--brown), #5A2800);
+      padding: 48px 20px;
+      text-align: center;
+    }
+    .counter-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .counter-item .num {
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 800;
+      color: var(--gold);
+    }
+    .counter-item .lbl {
+      font-size: 11px;
+      color: rgba(255,255,255,0.55);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* ── PRICING ── */
+    .pricing { background: white; }
+    .pricing-header-box {
+      background: linear-gradient(135deg, var(--red), var(--red-dark));
+      color: white;
+      border-radius: 20px 20px 0 0;
+      padding: 20px 24px;
+      text-align: center;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+    .pricing-list { display: flex; flex-direction: column; gap: 0; }
+    .pricing-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      border: 1.5px solid rgba(0,0,0,0.08);
+      border-top: 0;
+      background: white;
+      text-decoration: none;
+      color: var(--text);
+      transition: background 0.15s;
+      position: relative;
+      gap: 12px;
+      margin-top: 12px;
+      padding-bottom: 6px;
+    }
+    .pricing-item:last-child { border-radius: 0 0 20px 20px; }
+    .pricing-item:hover { background: #FFF2EE; }
+    .pricing-item.best {
+      background: linear-gradient(135deg, #FFF5F5, #FFECEC);
+      border-color: rgba(232,25,44,0.2);
+    }
+    .pi-qty { font-size: 16px; font-weight: 700; color: var(--brown); }
+    .pi-right { text-align: right; margin-top: 10px; }
+    .pi-old { font-size: 12px; color: #636363; text-decoration: line-through; }
+    .pi-price { font-size: 20px; font-weight: 800; color: var(--red); }
+    .pi-badge {
+      position: absolute;
+      top: 8px; right: 8px;
+      background: var(--red);
+      color: white;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 100px;
+      letter-spacing: 1px;
+    }
+    .best-badge {
+      position: absolute;
+      top: -10px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--brown);
+      font-size: 10px;
+      font-weight: 800;
+      padding: 3px 14px;
+      border-radius: 100px;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+    .cta-section {
+      margin-top: 24px;
+      text-align: center;
+    }
+    .cta-big {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 800;
+      padding: 22px;
+      border-radius: 16px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 8px 40px rgba(37,211,102,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin-bottom: 12px;
+    }
+    .cta-big:hover { transform: translateY(-3px); box-shadow: 0 16px 60px rgba(37,211,102,0.45); }
+    .cta-big small { display: block; font-size: 12px; font-weight: 500; opacity: 0.85; margin-top: 4px; }
+    .cta-note { font-size: 12px; color: var(--text-muted); }
+
+    /* ── SHIPPING ── */
+    .shipping { background: var(--cream); }
+    .shipping-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .ship-card {
+      background: white;
+      border-radius: 18px;
+      padding: 24px 20px;
+      text-align: center;
+    }
+    .ship-icon { font-size: 36px; margin-bottom: 12px; }
+    .ship-title { font-size: 13px; font-weight: 700; color: var(--brown); margin-bottom: 6px; text-transform: uppercase; }
+    .ship-desc { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+
+    /* ── GUARANTEE ── */
+    .guarantee {
+      background: linear-gradient(135deg, var(--brown), #5A2800);
+      padding: 60px 20px;
+      text-align: center;
+      color: white;
+    }
+    .guarantee-box {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .guarantee-icon { font-size: 64px; margin-bottom: 20px; }
+    .guarantee h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 4vw, 36px);
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .guarantee p { font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.7; margin-bottom: 32px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #1A0A00;
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 32px 20px;
+      font-size: 12px;
+    }
+
+    /* ── STICKY CTA (MOBILE) ── */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      padding: 16px 20px;
+      text-align: center;
+      z-index: 200;
+      display: none;
+    }
+    .sticky-cta a {
+      color: white;
+      font-weight: 800;
+      font-size: 16px;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 60px 16px; }
+      .ingredients-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+      .counter-grid { grid-template-columns: repeat(3, 1fr); }
+      .shipping-grid { grid-template-columns: 1fr 1fr; }
+      .about-card { padding: 28px 20px; }
+      .sticky-cta { display: block; }
+      body { padding-bottom: 70px; }
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse-red {
+      0%, 100% { box-shadow: 0 8px 40px rgba(232,25,44,0.5); }
+      50% { box-shadow: 0 8px 60px rgba(232,25,44,0.8); }
+    }
+    .pulse { animation: pulse-red 2s ease infinite; }
+
+    /* scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- URGENCY BAR -->
+  <div class="urgency-bar">
+    🔥 PROMO TERBATAS — SISA WAKTU: <span id="timer-display">10:00</span> — ORDER SEKARANG!
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">★ Viral Sejak 1999 — Terbukti & Terpercaya</div>
+    <h1>Kripik Balado<em>Lumer Viral</em></h1>
+    <p class="hero-sub">Bumbu racikan rahasia · Renyah · Bikin nagih · Dikirim ke seluruh Indonesia</p>
+
+    <div class="hero-img-wrap">
+      <img src="subdomain/kreasipintar/kripik/images/kripik.jpeg" alt="Kripik Balado Alamama Cassava">
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">10rb+</span>
+        <span class="stat-label">Pelanggan</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">95%</span>
+        <span class="stat-label">Repeat Order</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">10+ Thn</span>
+        <span class="stat-label">Pengalaman</span>
+      </div>
+    </div>
+
+    <a href="http://wa.me/6289603613338?text=Halo+kak+saya+mau+order+Kripik+Balado+dan+dapatkan+harga+promo%2C+terimakasih" target="_blank" class="hero-cta pulse">
+      ORDER SEKARANG
+    </a>
+
+    <div class="trust-badges">
+      <div class="trust-badge"><span>✅</span> COD Tersedia</div>
+      <div class="trust-badge"><span>🔒</span> Garansi Uang Kembali</div>
+      <div class="trust-badge"><span>🚚</span> Kirim Seluruh Indonesia</div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="container">
+      <div class="section-label">Tentang Kami</div>
+      <h2 class="section-title">Bukan Kripik Biasa</h2>
+      <p class="section-desc">Alamama Cassava hadir sejak 1999 dengan satu misi: membuat kripik singkong terenak yang pernah kamu coba.</p>
+
+      <div class="about-card reveal">
+        <div class="big-num">10+</div>
+        <div class="big-label">TAHUN KEAHLIAN</div>
+        <p>Kripik kami menggunakan <strong>saus bumbu racikan sendiri</strong> yang tidak pernah berubah sejak 1999. Perpaduan manis, asam, asin, dan pedas yang sempurna — bikin kamu langsung nagih dari gigitan pertama.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INGREDIENTS -->
+  <section class="ingredients">
+    <div class="container">
+      <div class="section-label">Bahan Pilihan</div>
+      <h2 class="section-title">Hanya Bahan Terbaik</h2>
+
+      <div class="ingredients-grid reveal">
+        <div class="ingredient-card">
+          <div class="ing-icon">🥔</div>
+          <div class="ing-title">Singkong Segar</div>
+          <div class="ing-desc">Langsung dari petani berpengalaman</div>
+        </div>
+        <div class="ingredient-card">
+          <div class="ing-icon">🌶️</div>
+          <div class="ing-title">Cabe Pilihan</div>
+          <div class="ing-desc">Cabe segar berkualitas tinggi</div>
+        </div>
+        <div class="ingredient-card">
+          <div class="ing-icon">🍬</div>
+          <div class="ing-title">Gula Premium</div>
+          <div class="ing-desc">Gula bersih & berkualitas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTER STRIP -->
+  <div class="counter-strip">
+    <div class="counter-grid">
+      <div class="counter-item">
+        <div class="num">10.000+</div>
+        <div class="lbl">Pelanggan</div>
+      </div>
+      <div class="counter-item">
+        <div class="num">95%</div>
+        <div class="lbl">Order Lagi</div>
+      </div>
+      <div class="counter-item">
+        <div class="num">5 ★★★★★</div>
+        <div class="lbl">Rating</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOCIAL PROOF -->
+  <section class="social-proof">
+    <div class="container">
+      <div class="section-label">Testimoni</div>
+      <h2 class="section-title">Kata Mereka yang Sudah Coba</h2>
+
+      <div class="review-list reveal">
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">S</div>
+            <div>
+              <div class="review-name">Sinta Naya</div>
+              <div class="review-loc">Jakarta</div>
+            </div>
+            <div class="review-stars" style="margin-left:auto">★★★★★</div>
+          </div>
+          <div class="review-text">"Kripiknya enak banget, bumbunya lumer ga pelit, rasanya unik baru kali ini nyobain keripik seenak ini. Nanti mau order lagi mau tawarin juga tetangga-tetangga biar pada nyoba hihi, terimakasih kak!"</div>
+          <div class="reorder-badge">🔄 REPEAT ORDER</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">N</div>
+            <div>
+              <div class="review-name">Netty Priska</div>
+              <div class="review-loc">Surabaya</div>
+            </div>
+            <div class="review-stars" style="margin-left:auto">★★★★★</div>
+          </div>
+          <div class="review-text">"Asli ini kripik enak banget, sodara aku juga coba dia bilang enak juga! Nanti kalau habis mau order langsung 20 pcs buat aku jual lagi 🤑"</div>
+          <div class="reorder-badge">🔄 JUAL LAGI & LAKU KERAS</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">W</div>
+            <div>
+              <div class="review-name">Wirda Siron</div>
+              <div class="review-loc">Aceh</div>
+            </div>
+            <div class="review-stars" style="margin-left:auto">★★★★★</div>
+          </div>
+          <div class="review-text">"Packingnya aman banget. Asli enak bumbunya pas — paduan Manis, Asam, Asin, Pedas yang bikin kripik ini punya rasa yang unik dan enak. Terimakasih kak!"</div>
+          <div class="reorder-badge">✅ VERIFIKASI PENERIMA</div>
+        </div>
+      </div>
+
+      <p style="text-align:center; margin-top:24px; color:var(--text-muted); font-size:13px; font-style:italic;">...dan masih banyak lagi testimoni positif dari seluruh Indonesia</p>
+    </div>
+  </section>
+
+  <!-- SHIPPING -->
+  <section class="shipping">
+    <div class="container">
+      <div class="section-label">Pengiriman & Keamanan</div>
+      <h2 class="section-title">Paket Dijamin Aman Sampai</h2>
+
+      <div class="shipping-grid reveal">
+        <div class="ship-card">
+          <div class="ship-icon">📦</div>
+          <div class="ship-title">Packing Aman</div>
+          <div class="ship-desc">Dus + Full Lakban + Lakban Fragile — 100% aman sampai rumah</div>
+        </div>
+        <div class="ship-card">
+          <div class="ship-icon">🚚</div>
+          <div class="ship-title">Ekspedisi JNT</div>
+          <div class="ship-desc">Terbukti aman, bisa dikirim ke seluruh Indonesia bahkan luar negeri</div>
+        </div>
+        <div class="ship-card">
+          <div class="ship-icon">💳</div>
+          <div class="ship-title">Bayar Fleksibel</div>
+          <div class="ship-desc">COD · Transfer BCA · OVO · DANA · ShopeePay · Shopee</div>
+        </div>
+        <div class="ship-card">
+          <div class="ship-icon">🛡️</div>
+          <div class="ship-title">Garansi 100%</div>
+          <div class="ship-desc">Uang kembali jika paket tidak sampai — tanpa syarat</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing">
+    <div class="container">
+      <div class="section-label">Pilih Paket Promo</div>
+      <h2 class="section-title">Harga Spesial — Terbatas!</h2>
+      <p class="section-desc">Semakin banyak order, semakin hemat. Banyak yang langsung order besar buat dijual lagi 🤑</p>
+
+      <div class="reveal">
+        <div class="pricing-header-box">🔥 DISKON HARI INI — AMBIL SEBELUM HABIS!</div>
+        <div class="pricing-list">
+
+          <a href="http://wa.me/6289603613338?text=Halo+kak+saya+mau+order+Kripik+Balado+1+Pcs+dan+dapatkan+harga+promo%2C+terimakasih" target="_blank" class="pricing-item">
+            <div class="pi-qty">1 PCS</div>
+            <div class="pi-right">
+              <div class="pi-old">Rp 45.000</div>
+              <div class="pi-price">Rp 30.000</div>
+            </div>
+            <div class="pi-badge">DISKON 33%</div>
+          </a>
+
+          <a href="http://wa.me/6289603613338?text=Halo+kak+saya+mau+order+Kripik+Balado+3+Pcs+dan+dapatkan+harga+promo%2C+terimakasih" target="_blank" class="pricing-item">
+            <div class="pi-qty">2 PCS</div>
+            <div class="pi-right">
+              <div class="pi-old">Rp 90.000</div>
+              <div class="pi-price">Rp 50.000</div>
+            </div>
+            <div class="pi-badge">DISKON 44%</div>
+          </a>
+
+          <a href="http://wa.me/6289603613338?text=Halo+kak+saya+mau+order+Kripik+Balado+4+Pcs+dan+dapatkan+harga+promo%2C+terimakasih" target="_blank" class="pricing-item best" style="position:relative; margin-top:12px; border-radius: 12px; border: 2px solid var(--gold);">
+            <div class="best-badge">⭐ PALING LARIS</div>
+            <div class="pi-qty">3 PCS</div>
+            <div class="pi-right">
+              <div class="pi-old">Rp 135.000</div>
+              <div class="pi-price">Rp 70.000</div>
+            </div>
+            <div class="pi-badge">DISKON 35%</div>
+          </a>
+
+          <a href="http://wa.me/6289603613338?text=Halo+kak+saya+mau+order+Kripik+Balado+4+Pcs+dan+dapatkan+harga+promo%2C+terimakasih" target="_blank" class="pricing-item">
+            <div class="pi-qty">4 PCS</div>
+            <div class="pi-right">
+              <div class="pi-old">Rp 180.000</div>
+              <div class="pi-price">Rp 90.000</div>
+            </div>
+            <div class="pi-badge">DISKON 50%</div>
+          </a>
+
+          <a href="http://wa.me/6289603613338?text=Halo+kak+saya+mau+order+Kripik+Balado+5+Pcs+dan+dapatkan+harga+promo%2C+terimakasih" target="_blank" class="pricing-item " >
+            
+            <div class="pi-qty">5 PCS / 1 Kg</div>
+            <div class="pi-right">
+              <div class="pi-old">Rp 225.000</div>
+              <div class="pi-price">Rp 100.000</div>
+            </div>
+            <div class="pi-badge">DISKON 56%</div>
+          </a>
+
+          <a href="http://wa.me/6289603613338?text=Halo+kak+saya+mau+order+Kripik+Balado+10+Pcs+dan+dapatkan+harga+promo%2C+terimakasih" target="_blank" class="pricing-item">
+            <div class="pi-qty">10 PCS / 2 Kg</div>
+            <div class="pi-right">
+              <div class="pi-old">Rp 450.000</div>
+              <div class="pi-price">Rp 195.000</div>
+            </div>
+            <div class="pi-badge">DISKON 57%</div>
+          </a>
+
+          <a href="http://wa.me/6289603613338?text=Halo+kak+saya+mau+order+Kripik+Balado+20+Pcs+dan+dapatkan+harga+promo%2C+terimakasih" target="_blank" class="pricing-item">
+            <div class="pi-qty">20 PCS / 4 Kg</div>
+            <div class="pi-right">
+              <div class="pi-old">Rp 900.000</div>
+              <div class="pi-price">Rp 380.000</div>
+            </div>
+            <div class="pi-badge">DISKON 58%</div>
+          </a>
+
+        </div>
+
+        <div class="cta-section">
+          <a href="http://wa.me/6289603613338?text=Halo+kak+saya+mau+order+Kripik+Balado+dan+dapatkan+harga+promo%2C+terimakasih" target="_blank" class="cta-big">
+            💬 CHAT WHATSAPP & ORDER SEKARANG
+            <small>Respon cepat · COD tersedia · Gratis packing</small>
+          </a>
+          <p class="cta-note">🔒 Garansi uang kembali jika paket tidak sampai</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUARANTEE -->
+  <section class="guarantee">
+    <div class="guarantee-box">
+      <div class="guarantee-icon">🛡️</div>
+      <h2>Garansi 100% Uang Kembali</h2>
+      <p>Kami begitu yakin dengan kualitas produk kami. Jika paket tidak sampai ke tangan kamu, kami kembalikan uang 100% — tanpa syarat, tanpa ribet.</p>
+      <a href="http://wa.me/6289603613338?text=Halo+kak+saya+mau+order+Kripik+Balado+dan+dapatkan+harga+promo%2C+terimakasih" target="_blank" class="hero-cta" style="display:inline-flex;">
+        ORDER SEKARANG <span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Kripik Balado Alamama Cassava · Berdiri sejak 1999</p>
+    <p style="margin-top:8px;">Dibuat dengan ❤️ untuk pelanggan setia kami di seluruh Indonesia</p>
+  </footer>
+
+  <!-- STICKY CTA MOBILE -->
+  <div class="sticky-cta">
+    <a href="http://wa.me/6289603613338?text=Halo+kak+saya+mau+order+Kripik+Balado+dan+dapatkan+harga+promo%2C+terimakasih" target="_blank">💬 ORDER SEKARANG via WhatsApp</a>
+  </div>
+
+  <script>
+    // Countdown Timer — persistent via localStorage
+    const TIMER_KEY = 'kripik_timer_end';
+    const timerEl = document.getElementById('timer-display');
+    let endTime = localStorage.getItem(TIMER_KEY);
+    if (!endTime || endTime < Date.now()) {
+      endTime = Date.now() + 10 * 60 * 1000;
+      localStorage.setItem(TIMER_KEY, endTime);
+    }
+    function updateTimer() {
+      const left = Math.max(0, endTime - Date.now());
+      const m = String(Math.floor(left / 60000)).padStart(2, '0');
+      const s = String(Math.floor((left % 60000) / 1000)).padStart(2, '0');
+      timerEl.textContent = `${m}:${s}`;
+      if (left === 0) {
+        endTime = Date.now() + 10 * 60 * 1000;
+        localStorage.setItem(TIMER_KEY, endTime);
+      }
+    }
+    updateTimer();
+    setInterval(updateTimer, 1000);
+
+    // Scroll Reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    reveals.forEach(r => observer.observe(r));
+  </script>
+</body>
+</html>
